@@ -1,6 +1,6 @@
 version: '3.2'
 services:
-  node:
+  main:
     build:
       context: .
       dockerfile: ./alpine/Dockerfile
