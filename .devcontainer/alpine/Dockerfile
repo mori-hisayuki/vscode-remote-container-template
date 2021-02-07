@@ -15,8 +15,6 @@ RUN apk --update --no-cache add git curl bash openssh-client sudo jq
 RUN echo "$USER_NAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/${USER_NAME} \
     && chmod 0440 /etc/sudoers.d/$USER_NAME
 
-COPY --chown=${GROUP_NAME}:${USER_NAME} ./ssh /home/${USER_NAME}/.ssh
-
 USER vscode
 RUN mkdir /home/${USER_NAME}/${WORK_DIR}
 WORKDIR /home/${USER_NAME}/${WORK_DIR}

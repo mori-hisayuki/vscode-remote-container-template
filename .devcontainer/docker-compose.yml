@@ -15,4 +15,6 @@ services:
       - TZ=JST-9
     ports:
       - 80:80
+    volumes:
+      - ~/.ssh:/home/vscode/.ssh
     command: /bin/sh -c "while sleep 1000; do :; done"
